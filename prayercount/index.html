@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrayerCount — Apple Watch rakat counter</title>
+  <meta name="description" content="PrayerCount is an Apple Watch app that counts the rakats of your daily prayer using the watch's barometric altimeter.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1d1d1f;
+      --muted: #6e6e73;
+      --link: #0066cc;
+      --border: #d2d2d7;
+      --accent: #34c759;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1d1d1f;
+        --fg: #f5f5f7;
+        --muted: #a1a1a6;
+        --link: #66b3ff;
+        --border: #424245;
+        --accent: #30d158;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--fg);
+      background: var(--bg);
+      margin: 0;
+      padding: 2em 1em 4em;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 2.4em; margin: 0 0 0.25em; line-height: 1.15; }
+    h2 { font-size: 1.4em; margin-top: 2.5em; padding-top: 1em; border-top: 1px solid var(--border); }
+    .tagline { color: var(--muted); font-size: 1.15em; margin: 0 0 2em; }
+    .nav { color: var(--muted); font-size: 0.9em; margin-bottom: 0.5em; }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { text-decoration: underline; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 1.5em; }
+    li { margin-bottom: 0.4em; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.75em; margin: 1.5em 0; }
+    .links a { padding: 0.6em 1.2em; border: 1px solid var(--border); border-radius: 8px; font-size: 0.95em; }
+    .links a:hover { background: var(--border); text-decoration: none; }
+    footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85em; }
+    @media (max-width: 600px) { body { font-size: 16px; padding: 1.5em 1em 3em; } h1 { font-size: 2em; } }
+  </style>
+</head>
+<body>
+<main>
+  <p class="nav"><a href="/">qymdev</a> &nbsp;/&nbsp; PrayerCount</p>
+  <h1>PrayerCount</h1>
+  <p class="tagline">An Apple Watch rakat counter that just works on your wrist.</p>
+
+  <p>PrayerCount keeps track of your rakats during salah using the watch's built-in barometric altimeter. A gentle haptic at the final rakat lets you finish without looking at the screen. Runs entirely on the watch &mdash; no iPhone needed during prayer, no account, no servers, no analytics.</p>
+
+  <div class="links">
+    <a href="/prayercount/privacy/">Privacy Policy</a>
+    <a href="mailto:support@qymdev.com">Contact &amp; Feedback</a>
+  </div>
+
+  <h2>Highlights</h2>
+  <ul>
+    <li>Automatic rakat counting via barometric sensor &mdash; no taps needed during prayer.</li>
+    <li>Five daily prayer times for your location, twelve calculation methods (Muslim World League, Umm al-Qura, ISNA, Diyanet, and more), Shafi or Hanafi Asr.</li>
+    <li>Optional opt-in prayer-time notifications, scheduled locally on the watch.</li>
+    <li>18 languages, including Arabic, Urdu, Persian, Bengali, Hausa, Bahasa Indonesia, and more.</li>
+    <li>Prayer history kept on-device for the last 200 sessions, exportable as JSON via the system share sheet.</li>
+    <li>Always-On display supported. Siri shortcut and Action Button hookup for one-sentence quick start.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>Designed to keep your prayer data on your watch. No accounts, no servers, no analytics, no advertising, no tracking. Location is rounded to ~1 km before being saved on-device, used only for prayer-time and Qibla calculation, and never transmitted. See the full <a href="/prayercount/privacy/">Privacy Policy</a>.</p>
+
+  <h2>Support</h2>
+  <p>Questions, bug reports, or feedback: <a href="mailto:support@qymdev.com">support@qymdev.com</a>.</p>
+
+  <footer>
+    <p>PrayerCount is built by qymdev. <a href="/">qymdev.com</a></p>
+  </footer>
+</main>
+</body>
+</html>
