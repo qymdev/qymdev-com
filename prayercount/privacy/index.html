@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — PrayerCount</title>
+  <meta name="description" content="Privacy policy for PrayerCount, an Apple Watch rakat counter that runs entirely on your watch.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1d1d1f;
+      --muted: #6e6e73;
+      --link: #0066cc;
+      --border: #d2d2d7;
+      --code-bg: #f5f5f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1d1d1f;
+        --fg: #f5f5f7;
+        --muted: #a1a1a6;
+        --link: #66b3ff;
+        --border: #424245;
+        --code-bg: #2c2c2e;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--fg);
+      background: var(--bg);
+      margin: 0;
+      padding: 2em 1em 4em;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 2em; margin: 0 0 0.25em; line-height: 1.2; }
+    h2 { font-size: 1.4em; margin-top: 2.5em; padding-top: 1em; border-top: 1px solid var(--border); line-height: 1.3; }
+    h3 { font-size: 1.1em; margin-top: 1.8em; line-height: 1.3; }
+    p, ul, ol, table { margin: 0.9em 0; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { padding-left: 1.5em; }
+    li { margin-bottom: 0.35em; }
+    li > ul, li > ol { margin: 0.4em 0; }
+    code { background: var(--code-bg); padding: 0.1em 0.4em; border-radius: 4px; font-size: 0.9em; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+    th, td { padding: 0.55em 0.7em; text-align: left; vertical-align: top; border: 1px solid var(--border); }
+    th { background: var(--code-bg); font-weight: 600; }
+    .muted, .updated { color: var(--muted); font-size: 0.9em; }
+    .updated { margin-bottom: 2em; }
+    .nav { color: var(--muted); font-size: 0.9em; margin-bottom: 0.5em; }
+    .nav a { color: var(--muted); }
+    footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85em; }
+    @media (max-width: 600px) {
+      body { font-size: 16px; padding: 1.5em 1em 3em; }
+      h1 { font-size: 1.7em; }
+      h2 { font-size: 1.25em; }
+      table { font-size: 0.88em; }
+      th, td { padding: 0.45em 0.5em; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="nav"><a href="/">qymdev</a> &nbsp;/&nbsp; <a href="/prayercount/">PrayerCount</a> &nbsp;/&nbsp; Privacy</p>
+  <h1>Privacy Policy — PrayerCount</h1>
+  <p class="updated"><strong>Last Updated:</strong> 2026-05-22</p>
+
+  <h2 id="overview">Overview</h2>
+  <p>PrayerCount is an Apple Watch app that counts the rakats of your daily prayer using the watch's barometric altimeter. It runs entirely on your watch. No account, no servers, no analytics, no advertising.</p>
+  <p>This policy explains what the app accesses on your device, how that information is used, and the rights you have under applicable law.</p>
+
+  <h2 id="data-controller">Data controller</h2>
+  <p>PrayerCount is developed and maintained by <strong>qymdev</strong>. For privacy questions or to exercise any of the rights described below, contact: <strong><a href="mailto:prayercount@qymdev.com">prayercount@qymdev.com</a></strong>. We aim to respond within 30 days.</p>
+
+  <h2 id="summary">Summary</h2>
+  <ul>
+    <li>We do not collect, receive, or store any information about you on our systems. We operate no servers.</li>
+    <li>Everything the app creates &mdash; your prayer history, settings, logs, cached coordinates &mdash; stays on your Apple Watch.</li>
+    <li>Location is used only on-device to calculate prayer times and the Qibla bearing. It is rounded to roughly the nearest kilometre before being saved to your watch, and it is never transmitted.</li>
+    <li>The app runs a brief &ldquo;Other&rdquo; workout session on the watch while you pray so that the altimeter keeps working when the screen dims. By default, each completed prayer is also logged as a Workout entry in the Health app; you can turn this off from the &ldquo;Save as Workout&rdquo; toggle in Settings. Either way, no heart-rate, calorie, or fitness metrics are recorded.</li>
+    <li>Notifications for prayer times are local only, opt-in, and scheduled entirely on your watch.</li>
+    <li>We do not sell, rent, share, or trade any data. There are no third-party analytics, advertising, or tracking components in the app.</li>
+    <li>The app contains a developer tip jar (small / medium / large one-time tips). Tip-jar purchases are handled entirely by Apple's StoreKit; we never see your payment details.</li>
+    <li>The only path by which any device-local data can leave your watch is when <strong>you</strong> tap &ldquo;Detailed Bug Report&rdquo; in Tools &rarr; Feedback, which opens the system mail composer pre-filled with a log appendix that you review and explicitly send.</li>
+  </ul>
+
+  <h2 id="what-the-app-accesses">What the app accesses on your device</h2>
+
+  <h3 id="altimeter">Barometric altimeter and motion sensor</h3>
+  <p>Used to detect when you move between standing and sujood positions so the rakat counter can advance. Altitude readings are processed in memory while a prayer session is active. A per-session diagnostic file on your watch (<code>trace.csv</code>) records, for each altimeter sample during the prayer, the elapsed time, the absolute barometric altitude reading, the change from your standing baseline, and the detection state (<code>waiting</code>, <code>qiyam</code>, <code>in_sujood</code>, <code>counted</code>, <code>calibrating</code>, etc.). The file is overwritten at the start of each new prayer, so only the most recent session is kept. The diagnostic file is sandboxed to the app, written with complete file protection, excluded from device backups, and never transmitted off the device unless you explicitly include it in a Detailed Bug Report (see &ldquo;Sending feedback&rdquo; below).</p>
+
+  <h3 id="location">Location</h3>
+  <p>Used only to (1) calculate the five daily prayer times for your geographic area and (2) compute the Qibla bearing toward Mecca for the in-app compass. The location permission is requested at the &ldquo;When In Use&rdquo; level (not &ldquo;Always&rdquo;) and is read at roughly kilometre-level accuracy. Coordinates are rounded to the nearest 0.01 degrees &mdash; about 1.1 kilometres &mdash; <em>before</em> they are stored in app memory or written to the watch's local preferences, so neither the running app nor the on-disk cache ever holds a value precise enough to identify your address. The rounded coordinates are used only to compute prayer times and the Qibla bearing, and are never transmitted off the device.</p>
+  <p>You can deny or revoke the location permission in the watch's Settings app at any time. Without location, the app still lets you choose and count any prayer manually; the Qibla compass becomes unavailable.</p>
+
+  <h3 id="magnetometer">Magnetometer (Qibla compass)</h3>
+  <p>When the in-app Qibla compass is on screen, the watch's magnetometer provides the device's heading relative to true north. The heading and the resulting Qibla arrow angle live only in memory. They are never written to disk and never transmitted. The magnetometer is stopped automatically the moment a prayer starts.</p>
+
+  <h3 id="healthkit">HealthKit (workout session)</h3>
+  <p>When a prayer begins, the app starts a brief <strong>HKWorkoutSession</strong> (activity type &ldquo;Other&rdquo;, location &ldquo;Indoor&rdquo;). The workout session is used to keep the barometric altimeter running while your screen dims &mdash; a platform requirement for apps that need continuous sensor access on Apple Watch.</p>
+  <p>By default, when the prayer ends, a Workout record is saved to the Health app. <strong>You can turn this off</strong> at any time using the &ldquo;Save as Workout&rdquo; toggle in the app's Settings. The workout session itself is unaffected by this toggle &mdash; the sensor keep-alive always runs during prayer &mdash; the toggle only controls whether the resulting Workout record is written to Health.</p>
+  <p>When a Workout record is saved, it contains:</p>
+  <ul>
+    <li>the start time and end time of the prayer,</li>
+    <li>the activity type (&ldquo;Other&rdquo;) and indoor flag,</li>
+    <li>a brand-name metadata field set to <code>PrayerCount &ndash; &lt;PrayerName&gt;</code> (for example <code>PrayerCount &ndash; Fajr</code>), and a <code>PrayerName</code> metadata key holding the same value, so you can see in the Health app which prayer the session corresponds to.</li>
+  </ul>
+  <p>The metadata reveals that you used PrayerCount and which Islamic prayer the workout corresponds to (Fajr, Dhuhr, Asr, Maghrib, Isha, or one of the optional prayers). Religious-practice information is classified as <strong>special-category data</strong> under Article 9 of the GDPR; we therefore process it only with your <strong>explicit consent</strong>, expressed by leaving the &ldquo;Save as Workout&rdquo; toggle on. Toggling it off prevents any further Workout records from being written and removes our processing of religious-affiliation data via HealthKit going forward (it does not delete records that were already saved to Health &mdash; those can be removed from the Health app on your paired iPhone at any time).</p>
+  <p><strong>Whether the toggle is on or off, the app does not read any health or fitness data from HealthKit. It does not record heart rate, active energy, distance, exercise minutes, stand time, or any other fitness metric.</strong> HealthKit is read-only-disabled (<code>read: []</code> in <code>requestAuthorization</code>). We have no access to your Health data.</p>
+
+  <h3 id="notifications">Notifications</h3>
+  <p>If you turn on &ldquo;Prayer Time Alerts&rdquo; in Settings, the app asks for permission to send notifications and then schedules up to 60 local calendar-based reminders, one for each upcoming prayer time for your saved location. Notifications fire locally on your watch &mdash; there is no push server, no APNs token, and nothing is sent over the network. You can turn the feature off at any time from the app's Settings; this cancels all scheduled reminders.</p>
+
+  <h3 id="siri">Siri / Action Button / Complications</h3>
+  <p>The app defines a &ldquo;Start Prayer&rdquo; Siri shortcut and ships two watchOS complications (a launcher and a one-tap &ldquo;Start Prayer&rdquo; deep-link). Invoking any of them does not transmit anything; they simply trigger the same code path as tapping &ldquo;Start&rdquo; in the app. The complications display only static iconography and read no personal data.</p>
+
+  <h3 id="feedback">Sending feedback</h3>
+  <p>Tools &rarr; Feedback offers two flows. <strong>Quick Feedback</strong> opens the system mail composer with a <code>mailto:</code> URL containing only your typed message. <strong>Detailed Bug Report</strong> also appends an inline log section to the email body containing:</p>
+  <ul>
+    <li>the most recent ~50&nbsp;KB of <code>events.log</code> (lifecycle events, detection states, sensor events; prayer names reduced to single-letter tags <code>F/D/A/M/I</code>; coordinates redacted),</li>
+    <li>the most recent ~30&nbsp;KB of <code>trace.csv</code> (altimeter samples from the most recent prayer only &mdash; elapsed seconds, altitude in metres, drop in metres, detector state),</li>
+    <li>the app version, watchOS version, and the timestamp at which the report was composed.</li>
+  </ul>
+  <p><code>history.json</code> is intentionally <strong>excluded</strong> from this bundle because it contains full prayer names and timestamps that some users may consider personal. The mail composer always shows you the full message before sending, and you can edit or cancel it. Nothing is uploaded automatically.</p>
+
+  <h3 id="tipjar">Tip jar (in-app purchases)</h3>
+  <p>Settings &rarr; Support the App contains three optional one-time tips processed via Apple's StoreKit (small / medium / large consumables). The app never sees your payment method, your Apple ID, or any billing information &mdash; Apple handles all of that. We receive only an anonymised confirmation that a transaction completed, plus aggregated payout reports from Apple. Tip purchases are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a> and the <a href="https://www.apple.com/legal/internet-services/itunes/">App Store &amp; Privacy notice</a>.</p>
+
+  <h2 id="legal-basis">Purpose and legal basis (GDPR)</h2>
+  <p>For users in the European Economic Area, the United Kingdom, and Switzerland, the legal basis under Article 6(1) of the GDPR for the on-device processing described above is <strong>Article 6(1)(b) &mdash; performance of a service you have requested by installing and using the app.</strong></p>
+  <p>Information about your religious practice (the prayer names you log, and the workout brand-name metadata you save to Health) is <strong>special-category data</strong> under Article 9 GDPR. Because all processing of that data is on-device and the only optional write-out path (HealthKit Workout records) is gated behind an opt-in toggle and a HealthKit authorisation prompt, we rely on <strong>Article 9(2)(a) &mdash; your explicit consent</strong> for that processing. You can withdraw consent at any time by turning off &ldquo;Save as Workout&rdquo; in Settings, by revoking HealthKit authorisation in the watch's Settings &rarr; Privacy &rarr; Health, or by deleting the records from the Health app.</p>
+  <p>Because no data leaves your device automatically, we do not act as a controller of personal data received from you. If you contact us using the email above, or send a Detailed Bug Report, we process that email correspondence under <strong>Article 6(1)(f) &mdash; legitimate interests in responding to your inquiry and improving the app.</strong></p>
+
+  <h2 id="storage">What is stored on your watch</h2>
+  <p>Everything below is stored in the app's private sandbox on your Apple Watch. None of it is transmitted to us or to any third party.</p>
+  <table>
+    <thead>
+      <tr><th>Data</th><th>Where</th><th>How long</th><th>Protection</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Prayer history (up to the last 200 completed sessions &mdash; prayer name, date, rakat count, target, duration, UUID)</td>
+        <td><code>history.json</code> in the app's Documents folder</td>
+        <td>Until you clear it or uninstall the app</td>
+        <td>Encrypted at rest using the device's data-protection feature (<code>completeFileProtectionUnlessOpen</code>); excluded from iCloud and iTunes backups</td>
+      </tr>
+      <tr>
+        <td>Diagnostic log (lifecycle events, detection state, calibration values, height setting, settings changes; prayer names reduced to single-letter tags)</td>
+        <td><code>events.log</code> in the app's Documents folder</td>
+        <td>Automatically trimmed when it exceeds 1&nbsp;MB</td>
+        <td>Same as above</td>
+      </tr>
+      <tr>
+        <td>Per-session sensor log (altitude readings and detection states during the most recent prayer)</td>
+        <td><code>trace.csv</code> in the app's Documents folder</td>
+        <td>Overwritten at the start of each new prayer</td>
+        <td>Same as above</td>
+      </tr>
+      <tr>
+        <td>App settings (calculation method, madhab, feedback mode, height, calibrated sujood threshold, language, debug mode, notifications-enabled toggle, save-as-workout toggle, large-rakat-counter toggle, onboarding flag)</td>
+        <td>Watch's local preferences (<code>UserDefaults</code>)</td>
+        <td>Until you change them or uninstall the app</td>
+        <td>Sandboxed by the operating system</td>
+      </tr>
+      <tr>
+        <td>Cached location (rounded latitude and longitude &mdash; ~1.1&nbsp;km precision)</td>
+        <td>Watch's local preferences (<code>UserDefaults</code>)</td>
+        <td>Until you change location, revoke the permission, or uninstall the app</td>
+        <td>Sandboxed by the operating system</td>
+      </tr>
+      <tr>
+        <td>Saved HKWorkout entries (saved by default; can be turned off via &ldquo;Save as Workout&rdquo; in Settings)</td>
+        <td>Health app on your paired iPhone / HealthKit</td>
+        <td>Until you delete them from the Health app</td>
+        <td>Managed by HealthKit; encrypted by iOS</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Diagnostic entries written while the app is running are also sent to the system unified log (<code>OSLog</code>) on your device, and the rakat detector emits <code>OSSignposter</code> performance markers to the same unified log. The unified log stays on the device, is managed by watchOS, and is not transmitted by this app. Free-form message bodies in these log entries are stored as plain text on your watch &mdash; they describe app activity (sensor readings, prayer-counting events) and contain no personally identifying information. Coordinates that appear in log calls are explicitly marked <code>privacy: .private</code>, which means they are redacted by the operating system in any log export. The unified log subsystem rotates entries off automatically; the on-disk diagnostic file (<code>events.log</code>) is auto-trimmed at 1&nbsp;MB.</p>
+
+  <h2 id="third-party">Third-party components and Apple services</h2>
+  <p>The only third-party code in the app is the open-source <strong>Adhan</strong> library (<a href="https://github.com/batoulapps/adhan-swift">github.com/batoulapps/adhan-swift</a>), used on-device to compute prayer times from your coordinates. It is distributed under the MIT Licence, performs pure mathematical calculations, and makes no network calls.</p>
+  <p>The app uses the following Apple-provided services. Each of them processes data under Apple's own privacy practices:</p>
+  <ul>
+    <li><strong>HealthKit</strong> &mdash; for the prayer workout session and (opt-in) Workout record save.</li>
+    <li><strong>CoreLocation</strong> &mdash; for one-shot location fixes and magnetometer heading.</li>
+    <li><strong>CoreMotion</strong> (<code>CMAltimeter</code>) &mdash; for the barometric altimeter.</li>
+    <li><strong>UserNotifications</strong> &mdash; for opt-in local prayer-time alerts.</li>
+    <li><strong>StoreKit 2</strong> &mdash; for the optional developer tip jar.</li>
+    <li><strong>App Intents / WidgetKit</strong> &mdash; for the &ldquo;Start Prayer&rdquo; Siri shortcut and the launcher / Start Prayer complications.</li>
+  </ul>
+  <p>The app contains no analytics SDKs, no advertising SDKs, no crash-reporting services, no attribution SDKs, no MetricKit collector, and no social or authentication frameworks.</p>
+
+  <h2 id="sharing">Data sharing and sale</h2>
+  <p>We do not share, sell, rent, disclose, or trade your information with any third party. There is nothing to share &mdash; we hold no data about you. For the purposes of the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA), <strong>we do not sell or share personal information</strong>, and we have not done so in the preceding twelve months.</p>
+
+  <h2 id="retention">Data retention</h2>
+  <p>All data stays on your device for as long as the app is installed. Uninstalling PrayerCount removes the entire app sandbox &mdash; prayer history, diagnostic logs, settings, and cached coordinates are deleted along with the app. Workout records previously saved to the Health app are not affected by uninstalling PrayerCount; they can be deleted from the Health app at any time.</p>
+
+  <h2 id="rights">Your rights</h2>
+  <p>Under applicable privacy law (including the GDPR, the UK GDPR, the CCPA, and the CPRA), you have the following rights. Because all app-created data is stored only on your device and we operate no servers, you exercise these rights directly on the device.</p>
+  <ul>
+    <li><strong>Right to be informed</strong> &mdash; this policy describes what the app accesses and why.</li>
+    <li><strong>Right of access</strong> &mdash; you can view your prayer history in the app's Prayer History screen. We hold no additional data about you.</li>
+    <li><strong>Right to rectification</strong> &mdash; you can edit your settings, height, calibration threshold, and language in the app's Settings screen.</li>
+    <li><strong>Right to erasure (&ldquo;right to be forgotten&rdquo;)</strong> &mdash; clear individual records from the Prayer History screen (swipe-to-delete), use &ldquo;Clear All&rdquo; inside Prayer History to wipe <code>history.json</code>, use &ldquo;Reset all settings&rdquo; in Settings to return all preferences to defaults, or uninstall the app to remove everything at once. To delete saved workout entries, use the Health app on your paired iPhone.</li>
+    <li><strong>Right to restrict processing</strong> &mdash; deny or revoke any permission (Location, HealthKit, Notifications, Motion) in the watch's Settings app. The app continues to function with reduced capability.</li>
+    <li><strong>Right to data portability</strong> &mdash; export your prayer history file (<code>history.json</code>) at any time via Settings &rarr; Your Data &rarr; Share History. The export is plain JSON in an open format, sharable via Mail, Messages, AirDrop, or Files.</li>
+    <li><strong>Right to object</strong> &mdash; contact us if you believe any processing is unjustified. Because no data reaches us, there is nothing for us to stop processing, but we will take your feedback seriously.</li>
+    <li><strong>Right to withdraw consent (Article 7 GDPR)</strong> &mdash; for the HealthKit Workout-record save, you can withdraw consent at any time by turning off &ldquo;Save as Workout&rdquo; in Settings or by revoking HealthKit authorisation in the watch's Settings &rarr; Privacy &rarr; Health.</li>
+    <li><strong>Right to lodge a complaint</strong> &mdash; if you are in the EEA, the UK, or Switzerland, you may complain to your local supervisory authority.</li>
+  </ul>
+
+  <h2 id="california">California residents (CCPA / CPRA)</h2>
+  <p>California residents have the right to know what categories of personal information are collected, to request deletion, to request correction, and to opt out of the sale or sharing of personal information. Because PrayerCount does not collect personal information on our servers and does not sell or share personal information, we have no categories to disclose for sale, and any deletion or correction request is fulfilled by the user directly on the device (see &ldquo;Your rights&rdquo; above). We will not discriminate against you for exercising any privacy right.</p>
+
+  <h2 id="children">Children</h2>
+  <p>PrayerCount is rated <strong>4+</strong> in the App Store. The app is not directed to children, does not knowingly collect personal information from any user (children or adults) on our servers, and does not contain advertising, third-party SDKs, or any feature that profiles users. We do not knowingly collect personal information from children under the age of 13 (or 16 in the EEA). If you believe a child has used the app and you wish to discuss this, contact us at the email above.</p>
+
+  <h2 id="security">Security</h2>
+  <p>Your data is protected by the security features built into watchOS:</p>
+  <ul>
+    <li>Every file the app writes to disk is stored with the <code>completeFileProtectionUnlessOpen</code> data-protection class, meaning the operating system encrypts it with a key derived from your passcode.</li>
+    <li>The diagnostic, history, and trace files are marked as excluded from iCloud and iTunes backups, so they are not copied off your device.</li>
+    <li>Stored coordinates are rounded to roughly 1.1 kilometre before being saved, limiting their precision.</li>
+    <li>We operate no servers and store no information outside your device, which eliminates the largest class of data-breach risks.</li>
+  </ul>
+  <p>No technical measure is perfect, but because your data stays on your device, the surface where it could be exposed is limited to your device itself.</p>
+
+  <h2 id="app-store-labels">App Store Connect &ldquo;App Privacy&rdquo; labels</h2>
+  <p>For reference, the App Store Connect privacy labels consistent with this policy are:</p>
+  <ul>
+    <li><strong>Data Used to Track You:</strong> <em>None.</em> (<code>NSPrivacyTracking=false</code>, no <code>NSPrivacyTrackingDomains</code>.)</li>
+    <li><strong>Data Linked to You:</strong> <em>None.</em> No identifiers, no accounts.</li>
+    <li><strong>Data Not Linked to You:</strong>
+      <ul>
+        <li><strong>Precise Location &rarr; App Functionality</strong> &mdash; used on-device for prayer-time and Qibla calculation, rounded to ~1.1&nbsp;km before storage, never transmitted.</li>
+        <li><strong>Health &amp; Fitness &rarr; App Functionality</strong> &mdash; opt-in HKWorkout records saved to the user's local Health store, never transmitted by us.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="changes">Changes to this policy</h2>
+  <p>If we materially change how the app handles data on your device, we will update this policy, change the &ldquo;Last Updated&rdquo; date, and note the change in the app's App Store release notes. Continued use of the app after a change means you accept the updated policy.</p>
+
+  <h2 id="contact">Contact</h2>
+  <p>For any question about this policy or about how PrayerCount handles information on your device, contact <strong><a href="mailto:prayercount@qymdev.com">prayercount@qymdev.com</a></strong>.</p>
+
+  <footer>
+    <p>Policy version 1.1 &mdash; drafted for the PrayerCount watchOS 1.0 submission. Reviewed against Apple App Store Review Guideline 5.1.1 (2025&ndash;2026), GDPR Articles 6(1), 7, and 9(2)(a), CCPA &sect;1798.100 et seq., and COPPA.</p>
+  </footer>
+</main>
+</body>
+</html>
