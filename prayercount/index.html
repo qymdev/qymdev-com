@@ -5,135 +5,228 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PrayerCount — Apple Watch rakat counter</title>
   <meta name="description" content="PrayerCount is an Apple Watch app that counts the rakats of your daily prayer using the watch's barometric altimeter.">
-  <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #1d1d1f;
-      --muted: #6e6e73;
-      --link: #0066cc;
-      --border: #d2d2d7;
-      --accent: #34c759;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #1d1d1f;
-        --fg: #f5f5f7;
-        --muted: #a1a1a6;
-        --link: #66b3ff;
-        --border: #424245;
-        --accent: #30d158;
-      }
-    }
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      font-size: 17px;
-      line-height: 1.6;
-      color: var(--fg);
-      background: var(--bg);
-      margin: 0;
-      padding: 2em 1em 4em;
-    }
-    main { max-width: 720px; margin: 0 auto; }
-    h1 { font-size: 2.4em; margin: 0 0 0.25em; line-height: 1.15; }
-    h2 { font-size: 1.4em; margin-top: 2.5em; padding-top: 1em; border-top: 1px solid var(--border); }
-    h3 { font-size: 1.05em; margin: 1.75em 0 0.5em; }
-    .tagline { color: var(--muted); font-size: 1.15em; margin: 0 0 2em; }
-    .nav { color: var(--muted); font-size: 0.9em; margin-bottom: 0.5em; }
-    .nav a { color: var(--muted); text-decoration: none; }
-    .nav a:hover { text-decoration: underline; }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul { padding-left: 1.5em; }
-    li { margin-bottom: 0.4em; }
-    .links { display: flex; flex-wrap: wrap; gap: 0.75em; margin: 1.5em 0; }
-    .links a { padding: 0.6em 1.2em; border: 1px solid var(--border); border-radius: 8px; font-size: 0.95em; }
-    .links a:hover { background: var(--border); text-decoration: none; }
-    footer { margin-top: 4em; padding-top: 1.5em; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85em; }
-    @media (max-width: 600px) { body { font-size: 16px; padding: 1.5em 1em 3em; } h1 { font-size: 2em; } }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <p class="nav"><a href="https://qymdev.com/">qymdev</a> &nbsp;/&nbsp; PrayerCount</p>
-  <h1>PrayerCount</h1>
-  <p class="tagline">An Apple Watch rakat counter that just works on your wrist.</p>
+<div class="frame">
+  <header class="meta-row">
+    <div><a href="https://qymdev.com/">qymdev</a> / prayercount</div>
+    <div>v1.0</div>
+    <div>2026-05-22</div>
+    <div>Apple Watch · watchOS 10+</div>
+  </header>
 
-  <p>PrayerCount keeps track of your rakats during salah using the watch's built-in barometric altimeter. A gentle haptic at the final rakat lets you finish without looking at the screen. Runs entirely on the watch &mdash; no iPhone needed during prayer, no account, no servers, no analytics.</p>
-
-  <div class="links">
-    <a href="/privacy/">Privacy Policy</a>
-    <a href="mailto:prayercount@qymdev.com">Contact &amp; Feedback</a>
+  <div class="hero">
+    <div class="ord">/00</div>
+    <h1>PrayerCount</h1>
+    <p class="tagline">An <strong>Apple Watch</strong> rakat counter that uses the watch's <strong>barometric altimeter</strong> to count rakats during salah. Runs on the wrist, no iPhone required.</p>
+    <div class="signal">PC<br>1.0</div>
   </div>
 
-  <h2>Features</h2>
+  <div class="stats">
+    <div class="stat">
+      <p class="num accent">0</p>
+      <p class="label">Servers operated. No accounts, no analytics.</p>
+    </div>
+    <div class="stat">
+      <p class="num">365</p>
+      <p class="label">Days of history kept on the watch. JSON exportable.</p>
+    </div>
+    <div class="stat">
+      <p class="num">12</p>
+      <p class="label">Calculation methods. Both schools for Asr.</p>
+    </div>
+    <div class="stat">
+      <p class="num">18</p>
+      <p class="label">Languages, with full RTL for Arabic, Persian, Urdu.</p>
+    </div>
+  </div>
 
-  <h3>Counting &amp; detection</h3>
-  <ul>
-    <li>Automatic rakat counting via the watch's barometric altimeter &mdash; no taps during prayer.</li>
-    <li>Guided calibration captures your standing-to-sujood height so detection fits your prayer form.</li>
-    <li>Gentle haptic at the final rakat &mdash; finish without glancing at the screen.</li>
-    <li>Choice of haptic-only or haptic-with-sound completion feedback.</li>
-  </ul>
+  <section>
+    <div class="lead">
+      <span class="ord">/01</span>
+      <h2>How it works</h2>
+      <p class="lead-dek">A barometric sensor, a calibration step, and a haptic at the final rakat.</p>
+    </div>
+    <div class="body">
+      <p>PrayerCount keeps track of your rakats using the watch's built-in altimeter. When you bow into sujood the air pressure rises a touch; when you stand again, it falls. That difference is enough to advance the count. A guided calibration up front captures your standing-to-sujood drop so detection fits the way you pray.</p>
+      <p>A gentle haptic at the final rakat lets you finish without looking at the screen. Choice of haptic-only or haptic-with-sound for the completion cue.</p>
+    </div>
+  </section>
 
-  <h3>Prayer selection &amp; timing</h3>
-  <ul>
-    <li>Auto-suggests the current prayer based on your location.</li>
-    <li>12 calculation methods: Muslim World League, ISNA (North America), Egyptian, Karachi, Umm al-Qura (Makkah), Dubai, Moonsighting Committee, Kuwait, Qatar, Singapore, Tehran, and Diyanet (Turkey).</li>
-    <li>Shafi or Hanafi school of thought for Asr timing.</li>
-    <li>Manual selection for Fajr, Dhuhr, Asr, Maghrib, Isha, and Witr.</li>
-    <li>Custom 2-rakat and 4-rakat sessions for nafl and sunnah prayers.</li>
-  </ul>
+  <section>
+    <div class="lead">
+      <span class="ord">/02</span>
+      <h2>Detection</h2>
+      <p class="lead-dek">Automatic counting, in detail.</p>
+    </div>
+    <div class="body">
+      <div class="cards">
+        <div class="card">
+          <p class="num">/02.A</p>
+          <h4>Auto-detect</h4>
+          <p>Automatic rakat counting via the watch's barometric altimeter. No taps during prayer.</p>
+        </div>
+        <div class="card">
+          <p class="num">/02.B</p>
+          <h4>Calibration</h4>
+          <p>Guided calibration captures your standing-to-sujood height so detection fits your prayer form.</p>
+        </div>
+        <div class="card">
+          <p class="num">/02.C</p>
+          <h4>Final-rakat haptic</h4>
+          <p>Gentle haptic at the final rakat. Finish without glancing at the screen.</p>
+        </div>
+        <div class="card">
+          <p class="num">/02.D</p>
+          <h4>Completion feedback</h4>
+          <p>Choose haptic-only or haptic-with-sound for the completion cue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h3>Optional sunnah prayers</h3>
-  <ul>
-    <li>Opt-in toggle that walks you through the sunnah prayers around each daily prayer &mdash; the suggestion advances <em>sunnah before &rarr; fard &rarr; sunnah after</em> automatically.</li>
-    <li>Four schedules to match how you pray: Mu&rsquo;akkadah only (12 rakat), with Asr sunnah (16 rakat), Hanafi maximum (20 rakat), or Match madhab.</li>
-    <li>Skip-forward: tap Skip on any step (or start the fard directly) and the sequence jumps to the next remaining step in the bracket.</li>
-    <li>Resumes where you left off after a force-quit; resets at day rollover.</li>
-  </ul>
+  <section>
+    <div class="lead">
+      <span class="ord">/03</span>
+      <h2>Selection &amp; timing</h2>
+      <p class="lead-dek">Twelve methods, two schools, six prayers, custom sessions, and an optional sunnah walk-through.</p>
+    </div>
+    <div class="body">
+      <div class="cards">
+        <div class="card">
+          <p class="num">/03.A</p>
+          <h4>Calculation methods</h4>
+          <p>MWL, ISNA, Egyptian, Karachi, Umm al-Qura, Dubai, Moonsighting Committee, Kuwait, Qatar, Singapore, Tehran, Diyanet.</p>
+        </div>
+        <div class="card">
+          <p class="num">/03.B</p>
+          <h4>Madhab</h4>
+          <p>Shafi or Hanafi for Asr timing. Switchable in Settings.</p>
+        </div>
+        <div class="card">
+          <p class="num">/03.C</p>
+          <h4>Manual prayers</h4>
+          <p>Fajr, Dhuhr, Asr, Maghrib, Isha, Witr.</p>
+        </div>
+        <div class="card">
+          <p class="num">/03.D</p>
+          <h4>Custom sessions</h4>
+          <p>2- or 4-rakat configurations for nafl and sunnah.</p>
+        </div>
+        <div class="card">
+          <p class="num">/03.E</p>
+          <h4>Optional sunnah</h4>
+          <p>Opt-in toggle. Suggestion walks <em>sunnah before &rarr; fard &rarr; sunnah after</em> automatically. Skip-forward semantics; resumes after force-quit; resets at day rollover.</p>
+        </div>
+        <div class="card">
+          <p class="num">/03.F</p>
+          <h4>Sunnah schedules</h4>
+          <p>Four presets: Mu&rsquo;akkadah only (12 rakat), with Asr sunnah (16 rakat), Hanafi maximum (20 rakat), or Match madhab.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h3>Qibla</h3>
-  <ul>
-    <li>Live Qibla compass with bearing to Mecca, calculated on-device from your location.</li>
-  </ul>
+  <section>
+    <div class="lead">
+      <span class="ord">/04</span>
+      <h2>Qibla, history, integrations</h2>
+      <p class="lead-dek">Compass, exportable history, optional Health, Siri, Always-On.</p>
+    </div>
+    <div class="body">
+      <div class="cards">
+        <div class="card">
+          <p class="num">/04.A</p>
+          <h4>Live Qibla compass</h4>
+          <p>Bearing to Mecca, calculated on-device from your location.</p>
+        </div>
+        <div class="card">
+          <p class="num">/04.B</p>
+          <h4>Prayer history</h4>
+          <p>Last 365 days kept on-device. Daily, weekly, monthly views. JSON export.</p>
+        </div>
+        <div class="card">
+          <p class="num">/04.C</p>
+          <h4>Notifications</h4>
+          <p>Optional on-watch alerts at each daily prayer time. Local only.</p>
+        </div>
+        <div class="card">
+          <p class="num">/04.D</p>
+          <h4>Apple Health</h4>
+          <p>Optional workout entry. Start, end, prayer name only. Toggle off any time.</p>
+        </div>
+        <div class="card">
+          <p class="num">/04.E</p>
+          <h4>Siri shortcut</h4>
+          <p>"Start Prayer" Siri shortcut for one-sentence quick start.</p>
+        </div>
+        <div class="card">
+          <p class="num">/04.F</p>
+          <h4>Always-On display</h4>
+          <p>Supported. Reduce Motion respected during prayer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h3>History</h3>
-  <ul>
-    <li>The last 365 days of prayer sessions kept on-device.</li>
-    <li>Daily, weekly, and monthly views plus a chronological list.</li>
-    <li>Export your history as JSON via the system share sheet.</li>
-  </ul>
+  <section>
+    <div class="lead">
+      <span class="ord">/05</span>
+      <h2>Accessibility &amp; languages</h2>
+      <p class="lead-dek">Full VoiceOver, Dynamic Type, Reduce Motion, Double Tap. 18 languages.</p>
+    </div>
+    <div class="body">
+      <p>Full VoiceOver labels and hints throughout. Dynamic Type for all text. Reduce Motion respected during prayer. Double Tap gesture support on Apple Watch Series 9 and later.</p>
+      <p>Available in: English, العربية, বাংলা, 简体中文, 繁體中文, Français, Deutsch, Hausa, Bahasa Indonesia, 日本語, 한국어, Bahasa Melayu, فارسی, Русский, Español, Kiswahili, Türkçe, اردو. Right-to-left layout for Arabic, Persian, and Urdu.</p>
+    </div>
+  </section>
 
-  <h3>Notifications &amp; integrations</h3>
-  <ul>
-    <li>Optional on-watch notifications at each daily prayer time.</li>
-    <li>Optional Apple Health workout entry &mdash; start time, end time, and prayer name only; toggle off any time.</li>
-    <li>"Start Prayer" Siri shortcut for a one-sentence quick start.</li>
-    <li>Always-On display supported.</li>
-  </ul>
+  <section>
+    <div class="lead">
+      <span class="ord">/06</span>
+      <h2>Privacy</h2>
+      <p class="lead-dek">Stays on the watch. Always.</p>
+    </div>
+    <div class="body">
+      <p>No accounts, no servers, no analytics, no advertising, no tracking. Location is rounded to ~1&nbsp;km on-device, used only for prayer-time and Qibla calculation, never transmitted.</p>
+      <div class="flow">
+        <div class="source"><strong>Location</strong>raw GPS</div>
+        <div class="arrow">→</div>
+        <div class="dest"><strong>Rounded ~1.1km</strong>UserDefaults, on-watch only</div>
+      </div>
+      <div class="flow">
+        <div class="source"><strong>Altimeter</strong>1Hz barometric samples</div>
+        <div class="arrow">→</div>
+        <div class="dest"><strong>trace.csv</strong>on-watch, overwritten each prayer</div>
+      </div>
+      <div class="flow">
+        <div class="source"><strong>Prayer history</strong>last 365 days</div>
+        <div class="arrow">→</div>
+        <div class="dest"><strong>history.json</strong>on-watch, encrypted at rest</div>
+      </div>
+      <p>The full <a href="privacy/">Privacy Policy</a> spells it out in detail &mdash; what's accessed, what's stored, what's transmitted (nothing), and your rights under the GDPR, the CCPA, and others.</p>
+    </div>
+  </section>
 
-  <h3>Accessibility</h3>
-  <ul>
-    <li>Full VoiceOver labels and hints throughout.</li>
-    <li>Dynamic Type for all text.</li>
-    <li>Reduce Motion respected during prayer.</li>
-    <li>Double Tap gesture support on Apple Watch Series 9 and later.</li>
-  </ul>
-
-  <h3>Languages</h3>
-  <p>Available in 18 languages: English, العربية (Arabic), বাংলা (Bengali), 简体中文 (Simplified Chinese), 繁體中文 (Traditional Chinese), Français, Deutsch, Hausa, Bahasa Indonesia, 日本語, 한국어, Bahasa Melayu, فارسی (Persian), Русский, Español, Kiswahili, Türkçe, and اردو (Urdu). Right-to-left layout for Arabic, Persian, and Urdu.</p>
-
-  <h2>Privacy</h2>
-  <p>Designed to keep your prayer data on your watch. No accounts, no servers, no analytics, no advertising, no tracking. Location is rounded to ~1 km before being saved on-device, used only for prayer-time and Qibla calculation, and never transmitted. See the full <a href="/privacy/">Privacy Policy</a>.</p>
-
-  <h2>Support</h2>
-  <p>Questions, bug reports, or feedback: <a href="mailto:prayercount@qymdev.com">prayercount@qymdev.com</a>.</p>
+  <section>
+    <div class="lead">
+      <span class="ord">/07</span>
+      <h2>Get</h2>
+      <p class="lead-dek">Privacy policy, contact, support.</p>
+    </div>
+    <div class="body">
+      <div class="links">
+        <a href="privacy/">Privacy Policy</a>
+        <a href="mailto:prayercount@qymdev.com">Contact &amp; Feedback</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>PrayerCount is built by qymdev. <a href="https://qymdev.com/">qymdev.com</a></p>
+    <div class="coord">01 · landing</div>
   </footer>
-</main>
+</div>
 </body>
 </html>
