@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>PrayerCount — theme previews</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 4em auto; padding: 0 1.5em; line-height: 1.55; color: #1d1d1f; background: #fff; }
+  h1 { font-size: 2em; margin: 0 0 0.4em; letter-spacing: -0.02em; }
+  p { color: #6e6e73; }
+  ol { padding-left: 0; list-style: none; counter-reset: themes; margin: 2.5em 0; }
+  ol li { counter-increment: themes; margin: 1em 0; }
+  ol li a { position: relative; display: block; padding: 1.2em 1.4em 1.2em 3.6em; border: 1px solid #d2d2d7; border-radius: 10px; text-decoration: none; color: inherit; transition: border-color 0.15s, background 0.15s; }
+  ol li a::before { content: counter(themes); position: absolute; left: 1.2em; top: 1.2em; font-weight: 700; color: #6e6e73; font-variant-numeric: tabular-nums; }
+  ol li a:hover { background: #f5f5f7; border-color: #1d1d1f; }
+  ol li strong { display: block; font-size: 1.15em; margin-bottom: 0.3em; }
+  ol li .meta { display: block; font-size: 0.78em; letter-spacing: 0.08em; text-transform: uppercase; color: #6e6e73; margin-bottom: 0.4em; }
+  ol li span.desc { color: #6e6e73; font-size: 0.95em; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1d1d1f; color: #f5f5f7; }
+    p, ol li span.desc, ol li .meta { color: #a1a1a6; }
+    ol li a { border-color: #424245; }
+    ol li a::before { color: #a1a1a6; }
+    ol li a:hover { background: #2c2c2e; border-color: #f5f5f7; }
+  }
+</style>
+</head>
+<body>
+<h1>PrayerCount — theme previews</h1>
+<p>Two directions, each restructured to feel like a different document &mdash; not just the same page in different colors. Both privacy pages now share the same 15-Article skeleton, styled in their own theme. Click into a theme to see its landing page; click <em>Privacy</em> inside to see the long-form treatment.</p>
+<ol>
+  <li><a href="grid/">
+    <span class="meta">Document type · Tech-spec sheet</span>
+    <strong>Grid</strong>
+    <span class="desc">12-column grid, signal-red accent, hero stats (0 servers · 365 days · 12 methods · 1.1km precision), feature cards in /02.A — /04.H format, data-flow diagrams.</span>
+  </a></li>
+  <li><a href="sufi/">
+    <span class="meta">Document type · Illuminated manuscript</span>
+    <strong>Sufi Modern</strong>
+    <span class="desc">Cream + terracotta + sage palette, Hoefler Text serif throughout, drop cap in terracotta, ornamental ✦ dividers, diamond ❖ bullets, italic asides, centered headers. Privacy policy as numbered Articles I—XV.</span>
+  </a></li>
+</ol>
+<p style="margin-top:3em;font-size:0.92em">Both themes use system fonts only — no network fetches needed. After picking a winner, the chosen one replaces the live <code>prayercount/index.html</code> and <code>prayercount/privacy/index.html</code>; the other is deleted.</p>
+</body>
+</html>
