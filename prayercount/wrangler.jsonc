@@ -1,0 +1,11 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "prayercount",
+  "compatibility_date": "2026-05-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "assets": { "directory": "." },
+  "routes": [
+    { "pattern": "prayercount.qymdev.com", "custom_domain": true }
+  ]
+}
